@@ -1,27 +1,27 @@
-package com.hana897trx.eclipseanime
+package com.hana897trx.eclipseanime.utilities
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
+import com.hana897trx.eclipseanime.R
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder> (){
 
     private var titles= arrayOf("Titulo Uno", "Titulo Dos", "Titulo Tres")
 
-    private var images= intArrayOf(R.drawable.angel,R.drawable.mob,R.drawable.angel)
+    private var images = intArrayOf(R.drawable.angel, R.drawable.mob, R.drawable.angel)
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val v= LayoutInflater.from(parent.context).inflate(R.layout.card_layout,parent,false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: RecyclerAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemTitle.text=titles[position]
         holder.itemImage.setImageResource(images[position])
     }
