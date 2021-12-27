@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.episodedetails.MainActivity">
+    tools:context=".ui.homefeed.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.hana897trx.eclipseanime.ui.episodedetails.FragmentHome"
+        android:name="com.hana897trx.eclipseanime.ui.homefeed.FragmentHome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

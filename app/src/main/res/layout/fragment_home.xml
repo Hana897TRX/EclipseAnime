@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ui.episodedetails.FragmentHome">
+    tools:context=".ui.homefeed.FragmentHome">
 
     <ImageView
         android:id="@+id/home_popular_anime_cover"

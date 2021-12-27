@@ -2,4 +2,8 @@
     <string name="app_name">EclipseAnime</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- API ERROR CODES -->
+    <string name="episodes_api_information_empty">Episodes is empty</string>
+    <string name="episodes_api_server_not_responding">Server is not responding</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.hana897trx.eclipseanime.ui.episodedetails
+package com.hana897trx.eclipseanime.ui.homefeed
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,16 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.hana897trx.eclipseanime.R
 import com.hana897trx.eclipseanime.databinding.FragmentHomeBinding
-import com.hana897trx.eclipseanime.utilities.RecyclerAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class FragmentHome : Fragment() {
 
     private lateinit var binding : FragmentHomeBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
