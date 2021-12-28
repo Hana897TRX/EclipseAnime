@@ -1,5 +1,7 @@
 package com.hana897trx.eclipseanime.data.models
 
+import com.google.gson.annotations.JsonAdapter
+
 data class AnimeModel(
     var animeName : String?,
     var animeTypeId : Int?,

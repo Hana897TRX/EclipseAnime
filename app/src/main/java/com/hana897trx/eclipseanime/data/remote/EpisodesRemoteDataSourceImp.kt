@@ -8,16 +8,17 @@ import com.hana897trx.eclipseanime.utilities.ErrorCodes.SERVER_OFFLINE
 import com.hana897trx.eclipseanime.utilities.StateResult
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
+import retrofit2.await
 import javax.inject.Inject
 
-class EpisodesRemoteDataSource @Inject constructor(
+class EpisodesRemoteDataSourceImp @Inject constructor(
     private val service : EpisodesApi
-    ) {
+    ) : EpisodeRemoteDataSource {
 
-    suspend fun getLastEpisodes() : Flow<StateResult<List<AnimeModel>>> {
-        val response = service.getLastEpisodes()
-        return if(response.isSuccessful) {
-            response.body()?.let { animeData ->
+    override suspend fun getLastEpisodes() : Flow<StateResult<List<AnimeModel>>> {
+        val response = service.getLastEpisodes().await()
+        return if(response.message == "success") {
+            response.data?.let { animeData ->
                 flowOf(StateResult.Success(animeData))
             } ?: flowOf(StateResult.Error(R.string.episodes_api_information_empty, EMPTY_DATA))
         }

@@ -1,6 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext.hilt_version = '2.37'
+    ext.activity_version = '1.4.0'
+    ext.fragment_version = '1.4.0'
     repositories {
         google()
         mavenCentral()
@@ -14,7 +16,7 @@ buildscript {
         classpath "com.squareup.retrofit2:converter-gson:2.9.0"
 
         //Corrutinas
-        classpath 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+        classpath 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
 
         // Dagger hilt
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
