@@ -17,6 +17,7 @@ class EpisodesRemoteDataSourceImp @Inject constructor(
 
     override suspend fun getLastEpisodes() : Flow<StateResult<List<AnimeModel>>> {
         val response = service.getLastEpisodes().await()
+        print(response)
         return if(response.message == "success") {
             response.data?.let { animeData ->
                 flowOf(StateResult.Success(animeData))
