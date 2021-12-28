@@ -7,6 +7,7 @@
     tools:context=".ui.homefeed.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.hana897trx.eclipseanime.ui.homefeed.FragmentHome"
