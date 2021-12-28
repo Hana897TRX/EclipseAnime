@@ -20,12 +20,6 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    @Singleton
-    @Provides
-    fun provideGlide(@ApplicationContext context : Context) : RequestManager {
-        return Glide.with(context)
-    }
-
     // Retrofit
     @Singleton
     @Provides

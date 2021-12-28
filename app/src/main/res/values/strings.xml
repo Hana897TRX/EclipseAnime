@@ -6,4 +6,6 @@
     <!-- API ERROR CODES -->
     <string name="episodes_api_information_empty">Episodes is empty</string>
     <string name="episodes_api_server_not_responding">Server is not responding</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
