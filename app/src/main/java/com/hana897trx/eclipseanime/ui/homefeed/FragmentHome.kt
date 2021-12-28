@@ -10,15 +10,20 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.hana897trx.eclipseanime.data.models.AnimeModel
 import com.hana897trx.eclipseanime.databinding.FragmentHomeBinding
+import com.hana897trx.eclipseanime.ui.adapter.EpisodesAdapter
+import com.hana897trx.eclipseanime.ui.adapter.RecyclerAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class FragmentHome : Fragment() {
 
     private lateinit var binding : FragmentHomeBinding
     private val viewModel : FragmentHomeViewModel by viewModels()
+    private var episodesAdapter = EpisodesAdapter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -27,21 +32,22 @@ class FragmentHome : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setRecycler()
+        //setRecycler()
         setEpisodesObserver()
     }
 
     private fun setEpisodesObserver() = lifecycleScope.launch {
         repeatOnLifecycle(Lifecycle.State.STARTED) {
-            viewModel.lastEpisodes.collect {
-                print(it)
+            viewModel.lastEpisodes.collect { episodes ->
+                setRecycler(episodes)
             }
         }
     }
 
-    private fun setRecycler() = binding.apply { // This is view Binding, will help to supply data to views
+    private fun setRecycler(episodesData : List<AnimeModel>) = binding.apply { // This is view Binding, will help to supply data to views
+        episodesAdapter.submitList(episodesData)
         homeRecyclerNewChapters.apply {
-            adapter = RecyclerAdapter()
+            adapter = episodesAdapter
             layoutManager = LinearLayoutManager(
                 requireContext(),
                 LinearLayoutManager.HORIZONTAL,

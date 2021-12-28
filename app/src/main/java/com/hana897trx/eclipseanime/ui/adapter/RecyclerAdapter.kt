@@ -1,4 +1,4 @@
-package com.hana897trx.eclipseanime.ui.homefeed
+package com.hana897trx.eclipseanime.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
