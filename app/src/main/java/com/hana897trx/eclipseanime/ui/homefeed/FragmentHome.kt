@@ -13,10 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.hana897trx.eclipseanime.data.models.AnimeModel
 import com.hana897trx.eclipseanime.databinding.FragmentHomeBinding
 import com.hana897trx.eclipseanime.ui.adapter.EpisodesAdapter
-import com.hana897trx.eclipseanime.ui.adapter.RecyclerAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class FragmentHome : Fragment() {

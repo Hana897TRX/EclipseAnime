@@ -10,6 +10,14 @@ import com.hana897trx.eclipseanime.ui.holder.AnimeHolder
 
 class EpisodesAdapter : ListAdapter<AnimeModel, AnimeHolder>(DiffUtilCallback()) {
 
+    private class DiffUtilCallback : DiffUtil.ItemCallback<AnimeModel>() {
+        override fun areItemsTheSame(oldItem: AnimeModel, newItem: AnimeModel) =
+            oldItem._id == newItem._id
+
+        override fun areContentsTheSame(oldItem: AnimeModel, newItem: AnimeModel) =
+            oldItem == newItem
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         AnimeHolder(
             ItemAnimeEpisodesBinding.inflate(
@@ -23,12 +31,4 @@ class EpisodesAdapter : ListAdapter<AnimeModel, AnimeHolder>(DiffUtilCallback())
         val anime = getItem(position)
         holder.setView(anime)
     }
-}
-
-private class DiffUtilCallback : DiffUtil.ItemCallback<AnimeModel>() {
-    override fun areItemsTheSame(oldItem: AnimeModel, newItem: AnimeModel) =
-        oldItem._id == newItem._id
-
-    override fun areContentsTheSame(oldItem: AnimeModel, newItem: AnimeModel) =
-        oldItem == newItem
 }
