@@ -1,7 +1,9 @@
 package com.hana897trx.eclipseanime.data.models
 
-import com.google.gson.annotations.JsonAdapter
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class AnimeModel(
     var _id : String?,
     var animeName : String?,
@@ -14,4 +16,4 @@ data class AnimeModel(
     var status : String?,
     var likes : Int?,
     var creators : String?
-)
+) : Parcelable

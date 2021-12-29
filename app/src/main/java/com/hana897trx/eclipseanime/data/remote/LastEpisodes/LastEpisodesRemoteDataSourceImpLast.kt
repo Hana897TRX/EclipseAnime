@@ -1,8 +1,8 @@
-package com.hana897trx.eclipseanime.data.remote
+package com.hana897trx.eclipseanime.data.remote.LastEpisodes
 
 import com.hana897trx.eclipseanime.R
 import com.hana897trx.eclipseanime.data.models.AnimeModel
-import com.hana897trx.eclipseanime.data.network.EpisodesApi
+import com.hana897trx.eclipseanime.data.network.LastEpisodesApi
 import com.hana897trx.eclipseanime.utilities.ErrorCodes.EMPTY_DATA
 import com.hana897trx.eclipseanime.utilities.ErrorCodes.SERVER_OFFLINE
 import com.hana897trx.eclipseanime.utilities.StateResult
@@ -11,9 +11,9 @@ import kotlinx.coroutines.flow.flowOf
 import retrofit2.await
 import javax.inject.Inject
 
-class EpisodesRemoteDataSourceImp @Inject constructor(
-    private val service : EpisodesApi
-    ) : EpisodeRemoteDataSource {
+class LastEpisodesRemoteDataSourceImpLast @Inject constructor(
+    private val service : LastEpisodesApi
+    ) : LastEpisodeRemoteDataSource {
 
     override suspend fun getLastEpisodes() : Flow<StateResult<List<AnimeModel>>> {
         val response = service.getLastEpisodes().await()

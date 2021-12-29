@@ -1,11 +1,11 @@
 package com.hana897trx.eclipseanime.domain
 
-import com.hana897trx.eclipseanime.data.remote.EpisodesRemoteDataSourceImp
+import com.hana897trx.eclipseanime.data.remote.LastEpisodes.LastEpisodesRemoteDataSourceImpLast
 import javax.inject.Inject
 
 class NewEpisodesUseCase @Inject constructor(
-    private val getLastEpisodes : EpisodesRemoteDataSourceImp
+    private val getLastLastEpisodes : LastEpisodesRemoteDataSourceImpLast
 ) {
     suspend fun invoke() =
-        getLastEpisodes.getLastEpisodes()
+        getLastLastEpisodes.getLastEpisodes()
 }

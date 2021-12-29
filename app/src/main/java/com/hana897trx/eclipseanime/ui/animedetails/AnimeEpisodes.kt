@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.hana897trx.eclipseanime.R
 import com.hana897trx.eclipseanime.databinding.FragmentAnimeEpisodesBinding
 
@@ -22,6 +23,7 @@ class AnimeEpisodes : Fragment() {
 
     private var animeID : String = ""
     private lateinit var binding : FragmentAnimeEpisodesBinding
+    private val viewModel : AnimeEpisodesViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
