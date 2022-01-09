@@ -6,7 +6,7 @@ import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.GET
 
-interface EpisodesApi {
+interface LastUpdatedAnimeApi {
     @GET("lastEpisodes")
     fun getLastEpisodes() : Call<RemoteResponse<List<AnimeModel>>>
 }

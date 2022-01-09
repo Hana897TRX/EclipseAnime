@@ -4,17 +4,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.hana897trx.eclipseanime.data.models.EpisodeModel
+import com.hana897trx.eclipseanime.data.models.EpisodeDataModel
 import com.hana897trx.eclipseanime.databinding.ItemEpisodesBinding
 import com.hana897trx.eclipseanime.ui.holder.AnimeEpisodesHolder
+import javax.inject.Inject
 
-class AnimeEpisodesAdapter : ListAdapter<EpisodeModel, AnimeEpisodesHolder>(DiffUtilCallback()) {
+class AnimeEpisodesAdapter @Inject constructor(): ListAdapter<EpisodeDataModel, AnimeEpisodesHolder>(DiffUtilCallback()) {
 
-    private class DiffUtilCallback : DiffUtil.ItemCallback<EpisodeModel>() {
-        override fun areItemsTheSame(oldItem: EpisodeModel, newItem: EpisodeModel) =
+    private class DiffUtilCallback : DiffUtil.ItemCallback<EpisodeDataModel>() {
+        override fun areItemsTheSame(oldItem: EpisodeDataModel, newItem: EpisodeDataModel) =
             oldItem._id == newItem._id
 
-        override fun areContentsTheSame(oldItem: EpisodeModel, newItem: EpisodeModel) =
+        override fun areContentsTheSame(oldItem: EpisodeDataModel, newItem: EpisodeDataModel) =
             oldItem == newItem
     }
 

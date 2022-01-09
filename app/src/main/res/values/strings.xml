@@ -8,4 +8,8 @@
     <string name="episodes_api_server_not_responding">Server is not responding</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- Episode details -->
+    <!-- Episode item -->
+    <string name="episode_name">Episodio</string>
 </resources>
