@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.hana897trx.eclipseanime.ui.animedetails.AnimeEpisodes
+import com.hana897trx.eclipseanime.ui.animedetails.AnimeEpisodesFragment
 
 class AnimeViewPaggerAdapter(
     lifecycle: Lifecycle,
@@ -15,10 +15,10 @@ class AnimeViewPaggerAdapter(
 
     override fun createFragment(position: Int): Fragment {
         return when(position) {
-            0 -> { AnimeEpisodes.newInstance(animeId) }
-            1 -> { AnimeEpisodes.newInstance(animeId) }
-            2 -> { AnimeEpisodes.newInstance(animeId) }
-            else -> { AnimeEpisodes.newInstance(animeId) }
+            0 -> { AnimeEpisodesFragment.newInstance(animeId) }
+            1 -> { AnimeEpisodesFragment.newInstance(animeId) }
+            2 -> { AnimeEpisodesFragment.newInstance(animeId) }
+            else -> { AnimeEpisodesFragment.newInstance(animeId) }:wq:wq
         }
     }
 }

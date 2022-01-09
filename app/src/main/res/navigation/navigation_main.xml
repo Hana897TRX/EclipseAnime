@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/animeDetails"
-        android:name="com.hana897trx.eclipseanime.ui.animedetails.AnimeDetails"
+        android:name="com.hana897trx.eclipseanime.ui.animedetails.AnimeDetailsFragment"
         android:label="fragment_anime_details"
         tools:layout="@layout/fragment_anime_details" >
         <action

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ui.animedetails.AnimeDetails">
+    tools:context=".ui.animedetails.AnimeDetailsFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,34 +23,34 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/anime_details_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:maxLines="2"
-                android:minLines="2"
+                android:text="Demon Slayer: Kimetsu no Yaiba – Entertainment District Arc"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/anime_details_video"
-                android:text="Demon Slayer: Kimetsu no Yaiba – Entertainment District Arc" />
+                app:layout_constraintTop_toBottomOf="@+id/anime_details_video" />
 
             <ImageView
                 android:id="@+id/anime_details_video"
                 android:layout_width="wrap_content"
                 android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/video_cover_dummy"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/video_cover_dummy" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/anime_details_alter_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -60,11 +60,11 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/anime_details_title"
                 android:text="Demon Slayer - 2021" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/anime_details_play_button"
                 style="@style/Widget.MaterialComponents.TimePicker.Button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -79,32 +79,28 @@
                 app:iconTint="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/anime_details_alter_title"
                 android:text="Play" />
 
             <ScrollView
                 android:id="@+id/scrollView2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:fillViewport="true"
-                app:layout_constraintTop_toBottomOf="@+id/button">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/anime_details_play_button">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/anime_details_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="16dp"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp"
-                        android:text="Estamos en la era Taisho de Japón. Tanjiro, un joven que se gana la vida vendiendo carbón, descubre un día que su familia ha sido asesinada por un demonio. Para empeorar las cosas, su hermana menor Nezuko" />
-                </LinearLayout>
+                    android:text="Estamos en la era Taisho de Japón. Tanjiro, un joven que se gana la vida vendiendo carbón, descubre un día que su familia ha sido asesinada por un demonio. Para empeorar las cosas, su hermana menor Nezuko"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
             </ScrollView>
 
             <ImageButton

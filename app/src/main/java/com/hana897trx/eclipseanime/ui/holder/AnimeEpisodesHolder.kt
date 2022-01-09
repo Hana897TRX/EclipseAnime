@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView
 import com.hana897trx.eclipseanime.R
 import com.hana897trx.eclipseanime.data.models.EpisodeDataModel
-import com.hana897trx.eclipseanime.data.models.EpisodeModel
 import com.hana897trx.eclipseanime.databinding.ItemEpisodesBinding
 import com.hana897trx.eclipseanime.utilities.GlideUtils.getInstance
 
