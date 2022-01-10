@@ -18,7 +18,7 @@ class AnimeViewPaggerAdapter(
             0 -> { AnimeEpisodesFragment.newInstance(animeId) }
             1 -> { AnimeEpisodesFragment.newInstance(animeId) }
             2 -> { AnimeEpisodesFragment.newInstance(animeId) }
-            else -> { AnimeEpisodesFragment.newInstance(animeId) }:wq:wq
+            else -> { AnimeEpisodesFragment.newInstance(animeId) }
         }
     }
 }

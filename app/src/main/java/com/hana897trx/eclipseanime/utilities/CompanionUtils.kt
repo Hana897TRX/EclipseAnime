@@ -9,6 +9,7 @@ import com.bumptech.glide.RequestManager
 object DataUtils {
     const val ANIME_CODE = "EXTRA:ANIME_MODEL"
     const val ANIME_ID = "EXTRA:ANIME_ID"
+    const val ANIME_VIDEO_URL = "EXTRA:ANIME_VIDEO_URL"
 }
 
 object APIData {
