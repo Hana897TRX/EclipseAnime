@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_animeDetails_to_fragmentHome"
             app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_animeDetails_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentHome"
@@ -21,6 +24,15 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_fragmentHome_to_animeDetails"
+            app:destination="@id/animeDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.hana897trx.eclipseanime.ui.videoplayer.VideoPlayerFragment"
+        android:label="fragment_video_player"
+        tools:layout="@layout/fragment_video_player" >
+        <action
+            android:id="@+id/action_videoPlayerFragment_to_animeDetails"
             app:destination="@id/animeDetails" />
     </fragment>
 </navigation>
